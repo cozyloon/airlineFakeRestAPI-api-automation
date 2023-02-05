@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/DELL/Desktop/github/airline-api-automation">
+        <classes>
+            <class name="tests.AirlineDetailsTest">
+                <methods>
+                    <include name="testAirlineDetailsAreReturnedByID"/>
+                    <include name="testCreatePassenger"/>
+                    <include name="testUpdatePassengerDetails"/>
+                    <include name="testGetUpdatedPassengerDetailsByID"/>
+                    <include name="testDeleteCreatedPassengerByID"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
