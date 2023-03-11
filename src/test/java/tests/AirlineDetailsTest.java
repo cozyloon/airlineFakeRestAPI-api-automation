@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import model.*;
 import org.testng.annotations.Test;
@@ -12,6 +15,9 @@ public class AirlineDetailsTest extends TestBase {
     String passengerID = "";
 
     @Test(description = "TC_1", alwaysRun = true)
+    @Description("Test Description")
+    @Feature("Feature Name")
+    @Story("Story Name")
     public void testAirlineDetailsAreReturnedByID() {
 
         Response response = restAssuredWrapper.get(AIRLINE_BASE_PATH + AIRLINE_ID);
@@ -29,6 +35,9 @@ public class AirlineDetailsTest extends TestBase {
     }
 
     @Test(description = "TC_2", alwaysRun = true)
+    @Description("Test Description")
+    @Feature("Feature Name")
+    @Story("Story Name")
     public void testCreatePassenger() {
 
         PassengerRequestDetails requestDetails = new PassengerRequestDetails();
@@ -49,6 +58,9 @@ public class AirlineDetailsTest extends TestBase {
     }
 
     @Test(description = "TC_3", alwaysRun = true, dependsOnMethods = "testCreatePassenger")
+    @Description("Test Description")
+    @Feature("Feature Name")
+    @Story("Story Name")
     public void testUpdatePassengerDetails() {
 
         PassengerRequestDetails requestDetails = new PassengerRequestDetails();
@@ -66,6 +78,9 @@ public class AirlineDetailsTest extends TestBase {
     }
 
     @Test(description = "TC_4", alwaysRun = true, dependsOnMethods = "testUpdatePassengerDetails")
+    @Description("Test Description")
+    @Feature("Feature Name")
+    @Story("Story Name")
     public void testGetUpdatedPassengerDetailsByID() {
 
         Response response = restAssuredWrapper.get(PASSENGER_BASE_PATH + passengerID);
@@ -78,6 +93,9 @@ public class AirlineDetailsTest extends TestBase {
     }
 
     @Test(description = "TC_5", alwaysRun = true, dependsOnMethods = "testGetUpdatedPassengerDetailsByID")
+    @Description("Test Description")
+    @Feature("Feature Name")
+    @Story("Story Name")
     public void testDeleteCreatedPassengerByID() {
 
         Response response = restAssuredWrapper.delete(PASSENGER_BASE_PATH + passengerID);
